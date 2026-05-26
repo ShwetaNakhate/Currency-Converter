@@ -1,0 +1,106 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=1600&auto=format&fit=crop&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: aliceblue;
+    padding: 30px 36px;
+    border-radius: 16px;
+    text-align: center;
+    min-width: 320px;
+}
+
+h1 {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.currency-container {
+    padding: 14px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.currency-container select {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.currency-container select option {
+    background: #1a1a2e;
+    color: white;
+}
+
+.currency-container input {
+    border: 0;
+    background: transparent;
+    font-size: 25px;
+    text-align: right;
+    color: aliceblue;
+    width: 150px;
+}
+
+.exchange-rate {
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-top: 12px;
+}
+
+select:focus,
+input:focus {
+    outline: 0;
+}
+
+#swap-btn {
+    margin: 6px auto;
+    display: block;
+    padding: 8px 22px;
+    background: rgba(255, 255, 255, 0.15);
+    color: aliceblue;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background 0.2s;
+}
+
+#swap-btn:hover {
+    background: rgba(255, 255, 255, 0.28);
+}
